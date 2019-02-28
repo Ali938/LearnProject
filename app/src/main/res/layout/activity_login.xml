@@ -13,6 +13,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:hint="@string/username"
+        android:inputType="text"
         android:textColor="@color/colorText"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -25,6 +26,7 @@
     <EditText
         android:id="@+id/password_editText_id"
         android:layout_width="match_parent"
+        android:inputType="textPassword"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"

@@ -29,8 +29,12 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String usernameString = username.getText().toString().trim();
-                Toast.makeText(context,"welcome " + usernameString,Toast.LENGTH_SHORT).show();
-                nextPage();
+                if (!usernameString.isEmpty()) {
+                    Toast.makeText(context, "welcome " + usernameString, Toast.LENGTH_SHORT).show();
+                    nextPage();
+                }else{
+                    Toast.makeText(context, "enter username", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
