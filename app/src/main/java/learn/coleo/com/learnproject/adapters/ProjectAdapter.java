@@ -16,8 +16,9 @@ import learn.coleo.com.learnproject.data.Project;
 
 public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.MyProjectHolder> {
 
-    class MyProjectHolder extends RecyclerView.ViewHolder{
+    class MyProjectHolder extends RecyclerView.ViewHolder {
         TextView projectName;
+
         public MyProjectHolder(View itemView) {
             super(itemView);
             projectName = itemView.findViewById(R.id.item_name_project);
@@ -26,6 +27,7 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.MyProjec
 
     private ArrayList<Project> projects;
     private Context context;
+
     public ProjectAdapter(Context context, ArrayList<Project> projects) {
         this.projects = projects;
         this.context = context;
@@ -46,7 +48,7 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.MyProjec
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context,"id : " + temp.getId(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "id : " + temp.getId(), Toast.LENGTH_SHORT).show();
             }
         });
     }
