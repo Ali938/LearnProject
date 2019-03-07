@@ -1,13 +1,22 @@
 package learn.coleo.com.learnproject.data;
 
-public class Project {
+import java.io.Serializable;
+import java.util.ArrayList;
+
+public class Project implements Serializable {
 
     private String name;
     private int id;
+    private ArrayList<ProjectPart> parts;
 
     public Project(String name, int id) {
         this.name = name;
         this.id = id;
+        parts = new ArrayList<>();
+    }
+
+    public ArrayList<ProjectPart> getParts() {
+        return parts;
     }
 
     public void setName(String name) {
@@ -25,4 +34,5 @@ public class Project {
     public int getId() {
         return id;
     }
+
 }

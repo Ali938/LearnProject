@@ -1,9 +1,14 @@
 package learn.coleo.com.learnproject.data;
 
+import android.widget.Adapter;
+
+import java.util.ArrayList;
+
 public class ProjectPart {
     private String name;
     private int id;
     private int progressPart;
+
     public ProjectPart(String name, int id) {
         this.name = name;
         this.id = id;

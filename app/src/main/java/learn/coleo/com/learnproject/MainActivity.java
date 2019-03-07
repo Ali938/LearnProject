@@ -10,6 +10,7 @@ import java.util.ArrayList;
 
 import learn.coleo.com.learnproject.adapters.ProjectAdapter;
 import learn.coleo.com.learnproject.data.Project;
+import learn.coleo.com.learnproject.data.ProjectPart;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,6 +26,11 @@ public class MainActivity extends AppCompatActivity {
 
         ArrayList<Project> projects = new ArrayList<>();
         projects.add(new Project("learn",0));
+        projects.get(0).getParts().add(new ProjectPart("Android",11));
+        projects.get(0).getParts().add(new ProjectPart("IOS",12));
+        projects.get(0).getParts().add(new ProjectPart("DATA_BASE",13));
+        projects.get(0).getParts().add(new ProjectPart("Design",14));
+        projects.get(0).getParts().add(new ProjectPart("Server",15));
         projects.add(new Project("pasmand",1));
         projects.add(new Project("arosi",2));
         projects.add(new Project("abjo",3));
