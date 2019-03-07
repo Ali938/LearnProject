@@ -1,7 +1,6 @@
 package learn.coleo.com.learnproject.adapters;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -12,9 +11,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-import learn.coleo.com.learnproject.Constants;
 import learn.coleo.com.learnproject.R;
-import learn.coleo.com.learnproject.SingleProject;
 import learn.coleo.com.learnproject.data.Project;
 
 public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.MyProjectHolder> {
@@ -49,10 +46,7 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.MyProjec
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, SingleProject.class);
-                intent.putExtra(Constants.SINGLE_PROJECT_DATA,temp);
-
-                context.startActivity(intent);
+                Toast.makeText(context,"id : " + temp.getId(),Toast.LENGTH_SHORT).show();
             }
         });
     }
