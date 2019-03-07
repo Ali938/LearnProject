@@ -9,9 +9,10 @@ import java.util.ArrayList;
 
 import learn.coleo.com.learnproject.adapters.ProjectPartsAdapter;
 import learn.coleo.com.learnproject.data.Project;
+import learn.coleo.com.learnproject.data.ProjectDetailSection;
 import learn.coleo.com.learnproject.data.ProjectPart;
 
-public class projectpartsActivity extends AppCompatActivity {
+public class ProjectPartsActivity extends AppCompatActivity {
 
     private RecyclerView projectParts;
     private ProjectPartsAdapter adapter;
@@ -24,10 +25,15 @@ public class projectpartsActivity extends AppCompatActivity {
 
         ArrayList<ProjectPart> parts = new ArrayList<>();
 
-        ProjectPart projectPart1=new ProjectPart("d",1);
+        ProjectPart projectPart1=new ProjectPart("ui part1",1);
         projectPart1.setProgressPart(100);
+        projectPart1.getDetails().add(new ProjectDetailSection("page one",false,0));
+        projectPart1.getDetails().add(new ProjectDetailSection("page two",false,0));
+        projectPart1.getDetails().add(new ProjectDetailSection("page three",false,0));
+        projectPart1.getDetails().add(new ProjectDetailSection("page four",false,0));
+        projectPart1.getDetails().add(new ProjectDetailSection("page five",false,0));
 
-        ProjectPart projectPart2=new ProjectPart("dgfg",2);
+        ProjectPart projectPart2=new ProjectPart("ui part 2",2);
         projectPart2.setProgressPart(0);
 
         ProjectPart projectPart3=new ProjectPart("dfdsfssdfd",3);

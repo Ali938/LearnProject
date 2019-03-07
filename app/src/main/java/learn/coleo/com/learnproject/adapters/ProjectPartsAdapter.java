@@ -1,6 +1,7 @@
 package learn.coleo.com.learnproject.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -13,6 +14,8 @@ import android.widget.Toast;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import java.util.ArrayList;
 
+import learn.coleo.com.learnproject.Constants;
+import learn.coleo.com.learnproject.ProjectDetailActivity;
 import learn.coleo.com.learnproject.R;
 import learn.coleo.com.learnproject.data.ProjectPart;
 
@@ -53,8 +56,9 @@ public class ProjectPartsAdapter extends RecyclerView.Adapter<ProjectPartsAdapte
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context,"part id : " + temp.getId()+" part progress: "+temp.getProgressPart(),
-                        Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(context, ProjectDetailActivity.class);
+                intent.putExtra(Constants.DETAIL_SECTION,temp.getDetails());
+                context.startActivity(intent);
             }
         });
 

@@ -23,10 +23,10 @@ public class ProjectDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_project_detail);
         title = findViewById(R.id.project_detail_title);
         list = findViewById(R.id.project_detail_list);
-        ArrayList<ProjectDetailSection> detailSections = new ArrayList<>();
-        for (int i = 0; i <= 15; i++) {
-            detailSections.add(new ProjectDetailSection("Detail #" + i, i % 2 == 0, i));
-        }
+
+        Bundle extra = getIntent().getExtras();
+        ArrayList<ProjectDetailSection> detailSections = (ArrayList<ProjectDetailSection>) extra.getSerializable(Constants.DETAIL_SECTION);
+
         adapter = new ProjectDetailAdapter(this, detailSections);
         list.setAdapter(adapter);
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());

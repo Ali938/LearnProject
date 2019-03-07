@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        ServerClass.getUserName(this);
+
         projectList = findViewById(R.id.recyclerList_projects_id);
 
         ArrayList<Project> projects = new ArrayList<>();

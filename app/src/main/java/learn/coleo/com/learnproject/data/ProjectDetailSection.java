@@ -1,6 +1,8 @@
 package learn.coleo.com.learnproject.data;
 
-public class ProjectDetailSection {
+import java.io.Serializable;
+
+public class ProjectDetailSection implements Serializable {
     private boolean isDone;
     private String title;
     private int id;

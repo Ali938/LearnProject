@@ -1,6 +1,7 @@
 package learn.coleo.com.learnproject.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -12,6 +13,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import learn.coleo.com.learnproject.ProjectPartsActivity;
 import learn.coleo.com.learnproject.R;
 import learn.coleo.com.learnproject.data.ProjectPart;
 
@@ -52,7 +54,8 @@ public class SingleProjectAdapter extends RecyclerView.Adapter<SingleProjectAdap
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(context, ProjectPartsActivity.class);
+                context.startActivity(intent);
             }
         });
 
