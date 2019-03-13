@@ -2,12 +2,14 @@ package learn.coleo.com.learnproject;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import learn.coleo.com.learnproject.server.ServerClass;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -29,10 +31,14 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String usernameString = username.getText().toString().trim();
+                String passwordString = password.getText().toString().trim();
                 if (!usernameString.isEmpty()) {
-                    Toast.makeText(context, "welcome " + usernameString, Toast.LENGTH_SHORT).show();
-                    nextPage();
-                }else{
+                    if (!passwordString.isEmpty()) {
+                        ServerClass.login(context, usernameString, passwordString);
+                    } else {
+                        Toast.makeText(context, "enter password", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
                     Toast.makeText(context, "enter username", Toast.LENGTH_SHORT).show();
                 }
             }

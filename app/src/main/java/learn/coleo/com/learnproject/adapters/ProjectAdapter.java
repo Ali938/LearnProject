@@ -8,20 +8,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
 import learn.coleo.com.learnproject.Constants;
 import learn.coleo.com.learnproject.R;
-import learn.coleo.com.learnproject.SingleProject;
+import learn.coleo.com.learnproject.SingleProjectDetails;
 import learn.coleo.com.learnproject.data.Project;
 
 public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.MyProjectHolder> {
 
     class MyProjectHolder extends RecyclerView.ViewHolder{
         TextView projectName;
-        public MyProjectHolder(View itemView) {
+        MyProjectHolder(View itemView) {
             super(itemView);
             projectName = itemView.findViewById(R.id.item_name_project);
         }
@@ -49,8 +48,9 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.MyProjec
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, SingleProject.class);
-                intent.putExtra(Constants.SINGLE_PROJECT_DATA,temp);
+                Intent intent = new Intent(context, SingleProjectDetails.class);
+                intent.putExtra(Constants.SINGLE_PROJECT_ID,temp.getId());
+                intent.putExtra(Constants.SINGLE_PROJECT_NAME,temp.getName());
                 context.startActivity(intent);
             }
         });

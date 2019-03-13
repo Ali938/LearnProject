@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SingleProject">
+    tools:context=".SingleProjectDetails">
 
     <TextView
         android:id="@+id/single_project_name_id"

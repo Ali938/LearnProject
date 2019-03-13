@@ -11,9 +11,7 @@
         android:roundIcon="@drawable/app_icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SingleProject"></activity>
-        <activity android:name=".ProjectDetailActivity"></activity>
-        <activity android:name=".ProjectPartsActivity" />
+        <activity android:name=".SingleProjectDetails"></activity>
         <activity
             android:name=".LoginActivity"
             android:windowSoftInputMode="adjustResize">
