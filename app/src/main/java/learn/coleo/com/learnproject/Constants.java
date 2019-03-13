@@ -5,9 +5,11 @@ import android.content.SharedPreferences;
 
 public class Constants {
 
-    private static String TOKEN_STORAGE = "someWhereInDarkness";
-    private static String TOKEN_DATA = "someWhereInDarkness12";
-    public static String NO_TOKEN = "nothingInTheBag";
+    private Constants(){}
+
+    private final static String TOKEN_STORAGE = "someWhereInDarkness";
+    private final static String TOKEN_DATA = "someWhereInDarkness12";
+    private final static String NO_TOKEN = "nothingInTheBag";
 
     public static final String SINGLE_PROJECT_DATA= "datasada";
     public static final String SINGLE_PROJECT_ID= "idasd";
@@ -16,7 +18,6 @@ public class Constants {
 
     private static final String BASE_URL = "http://abbas.coleo.me/api/";
     public static final String LOGIN_URL = BASE_URL + "v1/auth/sign_in/";
-
 
     public static void setToken(Context context, String token) {
         SharedPreferences sharedPreferences = context.getSharedPreferences(TOKEN_STORAGE, Context.MODE_PRIVATE);

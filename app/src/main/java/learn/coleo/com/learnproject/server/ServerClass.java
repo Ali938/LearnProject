@@ -18,6 +18,17 @@ import learn.coleo.com.learnproject.SingleProjectDetails;
 
 public class ServerClass {
 
+    private ServerClass() {
+    }
+
+    private static void saveToken(Context context, JSONObject request) {
+        try {
+            Constants.setToken(context, request.getString("token"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     private static void handleError(Context context, VolleyError error, int methodId) {
         error.printStackTrace();
     }
@@ -49,6 +60,7 @@ public class ServerClass {
                         new Response.Listener<JSONObject>() {
                             @Override
                             public void onResponse(JSONObject response) {
+                                saveToken(context, response);
                                 ((LoginActivity) context).nextPage();
                             }
                         }

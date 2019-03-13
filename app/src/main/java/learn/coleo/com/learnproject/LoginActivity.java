@@ -15,7 +15,6 @@ public class LoginActivity extends AppCompatActivity {
 
     private EditText username;
     private EditText password;
-    private Button submit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +24,7 @@ public class LoginActivity extends AppCompatActivity {
         final Context context = this;
         username = findViewById(R.id.username_editText_id);
         password = findViewById(R.id.password_editText_id);
-        submit = findViewById(R.id.submit_button_id);
+        Button submit = findViewById(R.id.submit_button_id);
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override

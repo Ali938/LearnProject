@@ -2,6 +2,7 @@ package learn.coleo.com.learnproject.data;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Project implements Serializable {
 
@@ -15,7 +16,7 @@ public class Project implements Serializable {
         parts = new ArrayList<>();
     }
 
-    public ArrayList<ProjectPart> getParts() {
+    public List<ProjectPart> getParts() {
         return parts;
     }
 
