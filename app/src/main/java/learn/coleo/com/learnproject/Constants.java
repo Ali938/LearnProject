@@ -16,8 +16,9 @@ public class Constants {
     public static final String SINGLE_PROJECT_NAME= "namesasd";
     public static final String DETAIL_SECTION = "detdsads";
 
-    private static final String BASE_URL = "http://abbas.coleo.me/api/";
-    public static final String LOGIN_URL = BASE_URL + "v1/auth/sign_in/";
+    private static final String BASE_URL = "http://abbas.coleo.me/api/v1/";
+    public static final String LOGIN_URL = BASE_URL + "auth/sign_in/";
+    public static final String PROJECTS_URL = BASE_URL + "developer/projects/";
 
     public static void setToken(Context context, String token) {
         SharedPreferences sharedPreferences = context.getSharedPreferences(TOKEN_STORAGE, Context.MODE_PRIVATE);

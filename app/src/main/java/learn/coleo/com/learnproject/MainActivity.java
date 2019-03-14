@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         projectList.setLayoutManager(mLayoutManager);
 
-        ServerClass.getProjects(this);
+        ServerClass.getProjects(this, projects);
 
     }
 
