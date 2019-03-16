@@ -46,18 +46,6 @@ public class ServerClass {
         }
     }
 
-    private static void putTokenInRequest(Context context, JsonObjectRequest jsonObjectRequest) {
-        String token = Constants.getToken(context);
-        try {
-            if (token != null)
-                jsonObjectRequest.getHeaders().put("token", token);
-            else
-                Log.i(TAG, "putTokenInRequest: null token");
-        } catch (AuthFailureError authFailureError) {
-            authFailureError.printStackTrace();
-        }
-    }
-
     public static void login(final Context context, String username, String password) {
         String url = Constants.LOGIN_URL;
 
