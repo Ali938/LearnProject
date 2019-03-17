@@ -4,4 +4,7 @@
     <string name="password">password</string>
     <string name="login">Login</string>
     <string name="splash_animation">splash animation</string>
+
+    <string name="username_transition">let us win</string>
+
 </resources>

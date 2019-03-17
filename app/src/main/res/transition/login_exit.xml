@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transitionSet xmlns:android="http://schemas.android.com/apk/res/android">
+    <explode xmlns:android="http://schemas.android.com/apk/res/android">
+        <targets>
+            <target android:targetId="@+id/password_editText_id"/>
+        </targets>
+    </explode>
+    <slide android:slideEdge="left">
+        <targets android:targetId="@+id/submit_button_id"/>
+    </slide>
+</transitionSet>
+
+
+

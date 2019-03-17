@@ -1,5 +1,6 @@
 package learn.coleo.com.learnproject;
 
+import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -45,9 +46,12 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-    public void nextPage(){
+    public void nextPage(String name){
+        ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(this,
+                username , getString(R.string.username_transition));
         Intent intent = new Intent(this,MainActivity.class);
-        startActivity(intent);
+        intent.putExtra(MainActivity.USERNAME_DATA,name);
+        startActivity(intent , options.toBundle());
         finish();
     }
 

@@ -23,27 +23,27 @@ public class Splash extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        ImageView imageView = findViewById(R.id.animation_image_id);
-
-        File image = new File("../res/drawable/hello.png");
-        if (image == null){
-            Log.i(TAG, "onCreate: ");
-        }else {
-            ApngAnimator animator = new ApngAnimator(this).loadInto(imageView);
-            ApngAnimatorOptions options = new ApngAnimatorOptions(ImageView.ScaleType.CENTER_CROP);
-            animator.load(image, 1f, options);
-        }
-//        final Context context = this;
-//        Runnable runnable = new Runnable() {
-//            @Override
-//            public void run() {
-//                Intent intent = new Intent(context,LoginActivity.class);
-//                startActivity(intent);
-//                finish();
-//            }
-//        };
+//        ImageView imageView = findViewById(R.id.animation_image_id);
 //
-//        new Handler().postDelayed(runnable,3000);
+//        File image = new File("../res/drawable/hello.png");
+//        if (image == null){
+//            Log.i(TAG, "onCreate: ");
+//        }else {
+//            ApngAnimator animator = new ApngAnimator(this).loadInto(imageView);
+//            ApngAnimatorOptions options = new ApngAnimatorOptions(ImageView.ScaleType.CENTER_CROP);
+//            animator.load(image, 1f, options);
+//        }
+        final Context context = this;
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                Intent intent = new Intent(context,LoginActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        };
+//
+        new Handler().postDelayed(runnable,3000);
 
     }
 }

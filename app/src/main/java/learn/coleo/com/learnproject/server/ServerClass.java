@@ -46,7 +46,7 @@ public class ServerClass {
         }
     }
 
-    public static void login(final Context context, String username, String password) {
+    public static void login(final Context context, final String username, String password) {
         String url = Constants.LOGIN_URL;
 
         JSONObject temp = new JSONObject();
@@ -65,7 +65,7 @@ public class ServerClass {
                             @Override
                             public void onResponse(JSONObject response) {
                                 saveToken(context, response);
-                                ((LoginActivity) context).nextPage();
+                                ((LoginActivity) context).nextPage(username);
                             }
                         }
                         , new Response.ErrorListener() {
