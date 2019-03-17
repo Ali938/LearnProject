@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transitionSet xmlns:android="http://schemas.android.com/apk/res/android">
+    <slide android:slideEdge="right"
+        android:duration="2000"
+        android:startDelay="1000">
+        <targets
+            android:targetId="@+id/profile_imageView_id"
+            />
+    </slide>
+
+    <slide android:slideEdge="bottom"
+        >
+        <targets
+            android:targetId="@+id/username_TextView_id"
+            />
+    </slide>
+</transitionSet>

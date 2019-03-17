@@ -9,9 +9,15 @@
     </style>
 
     <style name="AppTheme.Login" parent="AppTheme" >
-        
         <item name="android:windowExitTransition">@transition/login_exit</item>
-
     </style>
-    
+    <style name="AppTheme.Main" parent="AppTheme" >
+        <item name="android:windowExitTransition">@transition/menu_exit</item>
+        <item name="android:windowAnimationStyle">@transition/menu_enter</item>
+    </style>
+    <style name="AppTheme.Profile" parent="AppTheme" >
+        <item name="android:windowAnimationStyle">@transition/profile_enter</item>
+        <item name="android:windowExitTransition">@null</item>
+    </style>
+
 </resources>

@@ -6,5 +6,8 @@
     <string name="splash_animation">splash animation</string>
 
     <string name="username_transition">let us win</string>
+    <string name="profile_icon_transition">let me win</string>
+    <string name="profile_icon">profile_icon</string>
+    <string name="profile">Profile</string>
 
 </resources>

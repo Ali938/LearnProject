@@ -30,17 +30,18 @@ public class LoginActivity extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String usernameString = username.getText().toString().trim();
-                String passwordString = password.getText().toString().trim();
-                if (!usernameString.isEmpty()) {
-                    if (!passwordString.isEmpty()) {
-                        ServerClass.login(context, usernameString, passwordString);
-                    } else {
-                        Toast.makeText(context, "enter password", Toast.LENGTH_SHORT).show();
-                    }
-                } else {
-                    Toast.makeText(context, "enter username", Toast.LENGTH_SHORT).show();
-                }
+//                String usernameString = username.getText().toString().trim();
+//                String passwordString = password.getText().toString().trim();
+//                if (!usernameString.isEmpty()) {
+//                    if (!passwordString.isEmpty()) {
+//                        ServerClass.login(context, usernameString, passwordString);
+//                    } else {
+//                        Toast.makeText(context, "enter password", Toast.LENGTH_SHORT).show();
+//                    }
+//                } else {
+//                    Toast.makeText(context, "enter username", Toast.LENGTH_SHORT).show();
+//                }
+                ServerClass.login(context, "afshari9978", "12345678");
             }
         });
 
