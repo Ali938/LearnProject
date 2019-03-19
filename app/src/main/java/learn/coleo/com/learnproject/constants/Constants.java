@@ -1,7 +1,10 @@
-package learn.coleo.com.learnproject;
+package learn.coleo.com.learnproject.constants;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.Point;
+import android.view.Display;
 
 public class Constants {
 
@@ -33,5 +36,18 @@ public class Constants {
         return sharedPreferences.getString(TOKEN_DATA, NO_TOKEN);
     }
 
+    public static int getHeightOfScreen(Activity context){
+        Display display = context.getWindowManager(). getDefaultDisplay();
+        Point size = new Point();
+        display. getSize(size);
+        return size. y;
+    }
+
+    public static int getWidthOfScreen(Activity context){
+        Display display = context.getWindowManager(). getDefaultDisplay();
+        Point size = new Point();
+        display. getSize(size);
+        return size. x;
+    }
 
 }

@@ -30,6 +30,7 @@ public class LoginActivity extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (ServerClass.hasConnection(context)) {
 //                String usernameString = username.getText().toString().trim();
 //                String passwordString = password.getText().toString().trim();
 //                if (!usernameString.isEmpty()) {
@@ -41,7 +42,10 @@ public class LoginActivity extends AppCompatActivity {
 //                } else {
 //                    Toast.makeText(context, "enter username", Toast.LENGTH_SHORT).show();
 //                }
-                ServerClass.login(context, "afshari9978", "12345678");
+                    ServerClass.login(context, "afshari9978", "12345678");
+                }else{
+                    Toast.makeText(context,"check connection",Toast.LENGTH_SHORT).show();
+                }
             }
         });
 

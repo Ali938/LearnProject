@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">LearnProject</string>
+    <string name="app_name">Project Manager</string>
     <string name="username">username</string>
     <string name="password">password</string>
     <string name="login">Login</string>

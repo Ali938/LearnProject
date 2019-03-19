@@ -12,7 +12,7 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-import learn.coleo.com.learnproject.Constants;
+import learn.coleo.com.learnproject.constants.Constants;
 
 public class ObjectRequest extends JsonObjectRequest {
 

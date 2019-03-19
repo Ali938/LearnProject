@@ -1,23 +1,21 @@
 package learn.coleo.com.learnproject.server;
 
 import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.util.Log;
 
-import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
-import learn.coleo.com.learnproject.Constants;
+import learn.coleo.com.learnproject.constants.Constants;
 import learn.coleo.com.learnproject.LoginActivity;
 import learn.coleo.com.learnproject.MainActivity;
 import learn.coleo.com.learnproject.SingleProjectDetails;
@@ -27,6 +25,27 @@ public class ServerClass {
 
     private static final String TAG = "server class";
     private ServerClass() {
+    }
+
+    public static boolean hasConnection(Context context) {
+        ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+
+        NetworkInfo wifiNetwork = cm.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+        if (wifiNetwork != null && wifiNetwork.isConnected()) {
+            return true;
+        }
+
+        NetworkInfo mobileNetwork = cm.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
+        if (mobileNetwork != null && mobileNetwork.isConnected()) {
+            return true;
+        }
+
+        NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+        if (activeNetwork != null && activeNetwork.isConnected()) {
+            return true;
+        }
+
+        return false;
     }
 
     private static void saveToken(Context context, JSONObject request) {
