@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 import learn.coleo.com.learnproject.adapters.SingleProjectAdapter;
 import learn.coleo.com.learnproject.constants.Constants;
-import learn.coleo.com.learnproject.data.Work;
+import learn.coleo.com.learnproject.data.Task;
 import learn.coleo.com.learnproject.server.ServerClass;
 
 public class SingleProjectDetails extends AppCompatActivity {
@@ -31,7 +31,7 @@ public class SingleProjectDetails extends AppCompatActivity {
         TextView projectName = findViewById(R.id.single_project_name_id);
         projectName.setText(name);
 
-        ArrayList<Work> arrayList = new ArrayList<>();
+        ArrayList<Task> arrayList = new ArrayList<>();
 
         singleProjectAdapter = new SingleProjectAdapter(this, arrayList);
         singleProjectList.setAdapter(singleProjectAdapter);

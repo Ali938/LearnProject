@@ -1,21 +1,20 @@
 package learn.coleo.com.learnproject.data;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
-public class Task extends Work implements Serializable {
+public class Task implements Serializable {
 
-    private boolean Done;
+    private String title;
+    private String description;
+    private User owner;
+    private int point;
+    private int volume;
+    private Date deadLine;
+    private Date created;
+    private Date updated;
+    private Date closed;
+    private ArrayList<Task> children;
 
-    public Task(String name, int id,boolean Done) {
-        super(name, id);
-        this.Done = Done;
-    }
 
-    public void setDone(boolean done) {
-        Done = done;
-    }
-
-    public boolean isDone() {
-        return Done;
-    }
 }

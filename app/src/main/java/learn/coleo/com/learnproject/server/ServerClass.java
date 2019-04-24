@@ -20,6 +20,7 @@ import learn.coleo.com.learnproject.LoginActivity;
 import learn.coleo.com.learnproject.MainActivity;
 import learn.coleo.com.learnproject.SingleProjectDetails;
 import learn.coleo.com.learnproject.data.Project;
+import learn.coleo.com.learnproject.data.User;
 
 public class ServerClass {
 
@@ -144,7 +145,8 @@ public class ServerClass {
         if (name == null){
             return null;
         }
-        return new Project(name,id);
+        //todo clean
+        return new Project(id,name,new User("alireza",0),0);
 
     }
 

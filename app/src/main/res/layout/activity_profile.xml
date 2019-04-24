@@ -13,7 +13,6 @@
         android:layout_marginBottom="3dp"
         android:background="@color/colorPrimaryDark"
         android:minHeight="75dp"
-        app:layout_constraintBottom_toTopOf="@id/recyclerList_projects_id"
         app:layout_constraintTop_toTopOf="parent">
 
 
