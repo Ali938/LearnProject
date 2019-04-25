@@ -1,4 +1,4 @@
-package learn.coleo.com.learnproject;
+package learn.coleo.com.learnproject.activities;
 
 import android.app.ActivityOptions;
 import android.content.Context;
@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import learn.coleo.com.learnproject.R;
 import learn.coleo.com.learnproject.server.ServerClass;
 
 public class LoginActivity extends AppCompatActivity {

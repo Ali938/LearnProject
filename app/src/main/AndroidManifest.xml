@@ -12,10 +12,24 @@
         android:roundIcon="@drawable/app_icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ProfileActivity"
+        <activity
+            android:name=".activities.ProfileActivity"
             android:theme="@style/AppTheme.Profile"
             />
-        <activity android:name=".Splash">
+        <activity android:name=".activities.Splash">
+
+
+        </activity>
+        <activity android:name=".activities.SingleProjectDetails" />
+        <activity
+            android:name=".activities.LoginActivity"
+            android:theme="@style/AppTheme.Login"
+            android:windowSoftInputMode="adjustResize">
+
+        </activity>
+        <activity
+            android:name=".activities.MainActivity"
+            android:theme="@style/AppTheme.Main">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,16 +38,6 @@
             </intent-filter>
 
         </activity>
-        <activity android:name=".SingleProjectDetails" />
-        <activity
-            android:name=".LoginActivity"
-            android:theme="@style/AppTheme.Login"
-            android:windowSoftInputMode="adjustResize">
-
-        </activity>
-        <activity android:name=".MainActivity"
-            android:theme="@style/AppTheme.Main"
-            />
     </application>
 
 </manifest>

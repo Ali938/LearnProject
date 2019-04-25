@@ -1,4 +1,4 @@
-package learn.coleo.com.learnproject;
+package learn.coleo.com.learnproject.activities;
 
 import android.animation.ObjectAnimator;
 import android.content.Context;
@@ -10,10 +10,10 @@ import android.view.animation.AccelerateInterpolator;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
-import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import learn.coleo.com.learnproject.R;
 import learn.coleo.com.learnproject.constants.Constants;
 
 public class Splash extends AppCompatActivity {

@@ -16,9 +16,9 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 import learn.coleo.com.learnproject.constants.Constants;
-import learn.coleo.com.learnproject.LoginActivity;
-import learn.coleo.com.learnproject.MainActivity;
-import learn.coleo.com.learnproject.SingleProjectDetails;
+import learn.coleo.com.learnproject.activities.LoginActivity;
+import learn.coleo.com.learnproject.activities.MainActivity;
+import learn.coleo.com.learnproject.activities.SingleProjectDetails;
 import learn.coleo.com.learnproject.data.Project;
 import learn.coleo.com.learnproject.data.User;
 
@@ -119,7 +119,7 @@ public class ServerClass {
                                     e.printStackTrace();
                                 }
 
-                                ((MainActivity) context).changed();
+                                ((MainActivity) context).projectChanged();
                             }
                         }
                         , new Response.ErrorListener() {

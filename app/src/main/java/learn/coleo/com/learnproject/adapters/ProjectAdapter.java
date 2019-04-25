@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 import learn.coleo.com.learnproject.constants.Constants;
 import learn.coleo.com.learnproject.R;
-import learn.coleo.com.learnproject.SingleProjectDetails;
+import learn.coleo.com.learnproject.activities.SingleProjectDetails;
 import learn.coleo.com.learnproject.data.Project;
 
 public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.MyProjectHolder> {

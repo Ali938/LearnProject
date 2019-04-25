@@ -1,4 +1,4 @@
-package learn.coleo.com.learnproject;
+package learn.coleo.com.learnproject.activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import learn.coleo.com.learnproject.R;
 import learn.coleo.com.learnproject.adapters.SingleProjectAdapter;
 import learn.coleo.com.learnproject.constants.Constants;
 import learn.coleo.com.learnproject.data.Task;
