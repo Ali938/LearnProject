@@ -19,10 +19,10 @@ import learn.coleo.com.learnproject.server.ServerClass;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class DeadLine extends Fragment {
+public class Tasks extends Fragment {
 
 
-    public DeadLine() {
+    public Tasks() {
         // Required empty public constructor
     }
     private ProjectAdapter adapter;
@@ -34,11 +34,11 @@ public class DeadLine extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_dead_line, container, false);
 
-        RecyclerView projectList = view.findViewById(R.id.recyclerList_projects_id);
-        adapter = new ProjectAdapter(getContext(), projects);
-        projectList.setAdapter(adapter);
-        LinearLayoutManager mLayoutManager = new LinearLayoutManager(getContext());
-        projectList.setLayoutManager(mLayoutManager);
+//        RecyclerView projectList = view.findViewById(R.id.recyclerList_projects_id);
+//        adapter = new ProjectAdapter(getContext(), projects);
+//        projectList.setAdapter(adapter);
+//        LinearLayoutManager mLayoutManager = new LinearLayoutManager(getContext());
+//        projectList.setLayoutManager(mLayoutManager);
 
         return view;
     }
@@ -46,7 +46,7 @@ public class DeadLine extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        ServerClass.getProjects(getContext(), projects);
+//        ServerClass.getProjects(getContext(), projects);
     }
 
     public void changed() {

@@ -4,7 +4,6 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Toast;
@@ -12,10 +11,9 @@ import android.widget.Toast;
 import com.gigamole.navigationtabstrip.NavigationTabStrip;
 
 import learn.coleo.com.learnproject.R;
-import learn.coleo.com.learnproject.activities.main_page_fragment.DeadLine;
+import learn.coleo.com.learnproject.activities.main_page_fragment.Tasks;
 import learn.coleo.com.learnproject.activities.main_page_fragment.Profile;
 import learn.coleo.com.learnproject.activities.main_page_fragment.Projects;
-import learn.coleo.com.learnproject.data.Project;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     final FragmentManager fm = getSupportFragmentManager();
     final Fragment fragment1 = new Profile();
     final Fragment fragment2 = new Projects();
-    final Fragment fragment3 = new DeadLine();
+    final Fragment fragment3 = new Tasks();
     Fragment active = fragment2;
 
     @Override

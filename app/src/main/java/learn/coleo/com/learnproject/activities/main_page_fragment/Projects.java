@@ -37,6 +37,9 @@ public class Projects extends Fragment {
 
         RecyclerView projectList = view.findViewById(R.id.recyclerList_projects_id);
         adapter = new ProjectAdapter(getContext(), projects);
+        for (int i = 0; i < 10; i++) {
+            projects.add(new Project(0, " ", null, 0));
+        }
         projectList.setAdapter(adapter);
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(getContext());
         projectList.setLayoutManager(mLayoutManager);
@@ -47,7 +50,7 @@ public class Projects extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        ServerClass.getProjects(getContext(), projects);
+//        ServerClass.getProjects(getContext(), projects);
     }
 
     public void changed() {

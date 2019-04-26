@@ -22,7 +22,7 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.MyProjec
         TextView projectName;
         MyProjectHolder(View itemView) {
             super(itemView);
-            projectName = itemView.findViewById(R.id.item_name_project);
+//            projectName = itemView.findViewById(R.id.item_name_project);
         }
     }
 
@@ -43,14 +43,12 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.MyProjec
 
     @Override
     public void onBindViewHolder(@NonNull MyProjectHolder holder, int position) {
-        final Project temp = projects.get(position);
-        holder.projectName.setText(temp.getName());
+//        final Project temp = projects.get(position);
+//        holder.projectName.setText(temp.getName());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, SingleProjectDetails.class);
-                intent.putExtra(Constants.SINGLE_PROJECT_ID,temp.getId());
-                intent.putExtra(Constants.SINGLE_PROJECT_NAME,temp.getName());
                 context.startActivity(intent);
             }
         });

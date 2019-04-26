@@ -4,8 +4,9 @@
     <color name="colorPrimaryDark">#222831</color>
     <color name="colorPrimarySecond">#eeeeee</color>
     <color name="colorAccent">#00adb5</color>
+    <color name="colorAccentDark">#1D7D81</color>
     <color name="colorText">#000000</color>
     <color name="colorWhite">#ffffff</color>
     <color name="colorBorder">#c0c0ff</color>
-    <color name="morteza">#FF5722</color>
+    <color name="morteza">#E66928</color>
 </resources>

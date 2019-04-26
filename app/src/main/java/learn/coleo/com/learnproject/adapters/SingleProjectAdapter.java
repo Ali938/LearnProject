@@ -7,10 +7,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
-import android.widget.ProgressBar;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -38,7 +34,7 @@ public class SingleProjectAdapter extends RecyclerView.Adapter<SingleProjectAdap
     @Override
     public MyProjectPart onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).
-                    inflate(R.layout.item_recycler_view_single_project_parts, parent, false);
+                    inflate(R.layout.item_recycler_view_task, parent, false);
         return new MyProjectPart(v, viewType);
     }
 

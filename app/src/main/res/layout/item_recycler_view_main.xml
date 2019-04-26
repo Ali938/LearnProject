@@ -6,7 +6,7 @@
     android:minHeight="75dp"
     android:layout_marginLeft="10dp"
     android:layout_marginRight="10dp"
-    android:layout_marginTop="3dp"
+    android:layout_marginTop="7dp"
     android:elevation="4dp"
     android:background="@drawable/background_item_recycler_project">
 
@@ -14,23 +14,85 @@
         android:id="@+id/item_name_project"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_margin="10dp"
         android:text="Project name"
         android:padding="2dp"
         android:textColor="@color/colorText"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="10dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:layout_width="50dp"
-        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/remain"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+
+    <TextView
+        android:id="@+id/remain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="Open tasks: "
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_margin="20dp"
-        android:src="@mipmap/arrow"
-        />
+        app:layout_constraintLeft_toLeftOf="@id/item_name_project"
+        app:layout_constraintTop_toBottomOf="@id/item_name_project"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/open_task_text_view_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="25"
+        android:textColor="@color/colorWhite"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@id/remain"
+        app:layout_constraintLeft_toRightOf="@id/remain"
+        app:layout_constraintTop_toTopOf="@id/remain" />
+
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/progress_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/item_name_project"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        >
+
+        <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="175dp"
+            android:layout_height="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/percent_text_view"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rcBackgroundColor="@color/colorPrimary"
+            app:rcBackgroundPadding="2dp"
+            app:rcMax="100"
+            app:rcProgress="50"
+            app:rcProgressColor="@color/morteza"
+            app:rcRadius="10dp"
+            app:rcReverse="false"
+            app:rcSecondaryProgress="0"
+            app:rcSecondaryProgressColor="@color/colorAccentDark"
+            />
+
+        <TextView
+            android:id="@+id/percent_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="60%"
+            app:layout_constraintTop_toTopOf="@id/progressBar"
+            app:layout_constraintBottom_toBottomOf="@id/progressBar"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/progressBar"
+            android:textColor="@color/colorText"
+            android:layout_margin="7dp"
+            />
+
+    </android.support.constraint.ConstraintLayout>
 
 </android.support.constraint.ConstraintLayout>

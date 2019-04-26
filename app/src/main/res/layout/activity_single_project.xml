@@ -73,24 +73,25 @@
         app:layout_constraintTop_toBottomOf="@id/project_info"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/task_of_single_projects_id"
         android:layout_margin="10dp"
         >
 
 
     </com.github.mikephil.charting.charts.PieChart>
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerList_single_projects_id"
+    <Button
+        android:id="@+id/task_of_single_projects_id"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_height="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintVertical_bias="0"
-        app:layout_constraintVertical_chainStyle="packed">
-
-    </android.support.v7.widget.RecyclerView>
+        android:background="@drawable/back_task_project_button"
+        android:text="Project tasks"
+        android:textAllCaps="false"
+        app:layout_constraintVertical_chainStyle="packed" />
 
 
 </android.support.constraint.ConstraintLayout>
