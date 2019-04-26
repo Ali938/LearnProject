@@ -12,15 +12,19 @@
         android:roundIcon="@drawable/app_icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".activities.ProfileActivity"
-            android:theme="@style/AppTheme.Profile"
-            />
         <activity android:name=".activities.Splash">
+
+        </activity>
+        <activity android:name=".activities.SingleProjectDetails" >
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
 
         </activity>
-        <activity android:name=".activities.SingleProjectDetails" />
         <activity
             android:name=".activities.LoginActivity"
             android:theme="@style/AppTheme.Login"
@@ -31,11 +35,6 @@
             android:name=".activities.MainActivity"
             android:theme="@style/AppTheme.Main">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
         </activity>
     </application>

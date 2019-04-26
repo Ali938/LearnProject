@@ -2,13 +2,13 @@
 <resources>
     <string-array name="titles">
         <item>
-            profile
+            Profile
         </item>
         <item>
-            projects
+            Projects
         </item>
         <item>
-            DeadLines
+            Tasks
         </item>
 
     </string-array>

@@ -70,38 +70,10 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        navigationTabStrip.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int i, float v, int i1) {
-
-            }
-
-            @Override
-            public void onPageSelected(int i) {
-
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int i) {
-
-            }
-        });
 
         fm.beginTransaction().add(R.id.main_container, fragment1, "1").hide(fragment1).commit();
         fm.beginTransaction().add(R.id.main_container, fragment2, "2").commit();
         fm.beginTransaction().add(R.id.main_container, fragment3, "3").hide(fragment3).commit();
-
-
-//        ImageView profile = findViewById(R.id.profile_imageView_id);
-//        profile.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(context, ProfileActivity.class);
-//                startActivity(intent);
-//            }
-//        });
-//
-
 
     }
 

@@ -7,6 +7,7 @@
     android:layout_marginLeft="10dp"
     android:layout_marginRight="10dp"
     android:layout_marginTop="3dp"
+    android:elevation="4dp"
     android:background="@drawable/background_item_recycler_project">
 
     <TextView
@@ -14,6 +15,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_margin="10dp"
+        android:text="Project name"
         android:padding="2dp"
         android:textColor="@color/colorText"
         android:textSize="18sp"
