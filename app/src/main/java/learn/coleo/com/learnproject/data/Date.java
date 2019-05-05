@@ -1,6 +1,8 @@
 package learn.coleo.com.learnproject.data;
 
-public class Date {
+import java.io.Serializable;
+
+public class Date implements Serializable {
 
     private int day;
     private int month;
@@ -106,5 +108,19 @@ public class Date {
                 "/" + day +
                 "\n" + hour +
                 ":" + minute;
+    }
+
+    public String getStringDate() {
+        return year +
+                "/" + month +
+                "/" + day;
+    }
+
+    public int getDifrence(Date date) {
+        int temp = this.year * 365 + this.month * 30 + this.day;
+        temp -= date.year * 365;
+        temp -= date.month * 30;
+        temp -= date.day;
+        return temp;
     }
 }

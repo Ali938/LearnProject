@@ -43,7 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:text="25"
-        android:textColor="@color/colorWhite"
+        android:textColor="@color/colorAccent"
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="@id/remain"
         app:layout_constraintLeft_toRightOf="@id/remain"

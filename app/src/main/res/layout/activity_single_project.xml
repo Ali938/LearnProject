@@ -20,11 +20,14 @@
             android:id="@+id/single_project_name_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
             android:text="ProjectName"
             android:textColor="@color/colorWhite"
             android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@id/single_project_description"
+            app:layout_constraintBottom_toTopOf="@id/dummy_admin"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_chainStyle="packed" />
@@ -47,11 +50,37 @@
             android:layout_margin="10dp"
             android:padding="10dp"
             android:text="98/2/2"
+            android:gravity="center"
             android:textColor="@color/colorWhite"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="@id/single_project_name_id"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="@id/single_project_name_id" />
+
+        <TextView
+            android:id="@+id/dummy_admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:text="Admin:"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintBottom_toTopOf="@id/single_project_description"
+            app:layout_constraintLeft_toLeftOf="@id/single_project_name_id"
+            app:layout_constraintTop_toBottomOf="@id/single_project_name_id" />
+
+        <TextView
+            android:id="@+id/admin_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:fontFamily="serif"
+            android:text="morteza afshari"
+            android:textColor="@color/colorAccent"
+            android:textSize="17sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="@id/dummy_admin"
+            app:layout_constraintLeft_toRightOf="@+id/dummy_admin"
+            app:layout_constraintTop_toTopOf="@id/dummy_admin" />
 
         <TextView
             android:id="@+id/single_project_description"
@@ -62,7 +91,7 @@
             android:layout_marginBottom="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/single_project_name_id" />
+            app:layout_constraintTop_toBottomOf="@id/admin_text_view" />
 
     </android.support.constraint.ConstraintLayout>
 

@@ -1,6 +1,5 @@
 package learn.coleo.com.learnproject.activities;
 
-import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,12 +10,13 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import learn.coleo.com.learnproject.R;
+import learn.coleo.com.learnproject.constants.Constants;
 import learn.coleo.com.learnproject.server.ServerClass;
 
 public class LoginActivity extends AppCompatActivity {
 
     private EditText username;
-    private EditText password;
+    private Button submit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,23 +25,18 @@ public class LoginActivity extends AppCompatActivity {
 
         final Context context = this;
         username = findViewById(R.id.username_editText_id);
-        password = findViewById(R.id.password_editText_id);
-        Button submit = findViewById(R.id.submit_button_id);
+        submit = findViewById(R.id.submit_button_id);
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (ServerClass.hasConnection(context)) {
+                    submit.setEnabled(false);
                     String usernameString = username.getText().toString().trim();
-                    String passwordString = password.getText().toString().trim();
                     if (!usernameString.isEmpty()) {
-                        if (!passwordString.isEmpty()) {
-                            ServerClass.login(context, usernameString, passwordString);
-                        } else {
-                            Toast.makeText(context, "enter password", Toast.LENGTH_SHORT).show();
-                        }
+                        ServerClass.checkPhone(context, usernameString);
                     } else {
-                        Toast.makeText(context, "enter username", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "enter phone", Toast.LENGTH_SHORT).show();
                     }
                 }else{
                     Toast.makeText(context,"check connection",Toast.LENGTH_SHORT).show();
@@ -51,14 +46,15 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-    public void nextPage(String name){
-        ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(this,
-                username , getString(R.string.username_transition));
-        Intent intent = new Intent(this,MainActivity.class);
-        intent.putExtra(MainActivity.USERNAME_DATA,name);
-        startActivity(intent , options.toBundle());
-        finish();
+
+    public void enable() {
+        submit.setEnabled(true);
     }
 
+    public void goCode(String phone) {
+        Intent intent = new Intent(this, CodeActivity.class);
+        intent.putExtra(MainActivity.USERNAME_DATA, phone);
+        startActivityForResult(intent, Constants.SUBMIT_CODE);
+    }
 
 }

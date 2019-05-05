@@ -9,20 +9,28 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar;
+
 import java.util.ArrayList;
 
-import learn.coleo.com.learnproject.constants.Constants;
 import learn.coleo.com.learnproject.R;
 import learn.coleo.com.learnproject.activities.SingleProjectDetails;
+import learn.coleo.com.learnproject.constants.Constants;
 import learn.coleo.com.learnproject.data.Project;
 
 public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.MyProjectHolder> {
 
     class MyProjectHolder extends RecyclerView.ViewHolder{
         TextView projectName;
+        TextView percent;
+        TextView openTask;
+        RoundCornerProgressBar progressBar;
         MyProjectHolder(View itemView) {
             super(itemView);
-//            projectName = itemView.findViewById(R.id.item_name_project);
+            projectName = itemView.findViewById(R.id.item_name_project);
+            progressBar = itemView.findViewById(R.id.progressBar);
+            percent = itemView.findViewById(R.id.percent_text_view);
+            openTask = itemView.findViewById(R.id.open_task_text_view_id);
         }
     }
 
@@ -43,12 +51,18 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.MyProjec
 
     @Override
     public void onBindViewHolder(@NonNull MyProjectHolder holder, int position) {
-//        final Project temp = projects.get(position);
-//        holder.projectName.setText(temp.getName());
+        final Project temp = projects.get(position);
+        holder.projectName.setText(temp.getName());
+        holder.progressBar.setMax(temp.getMaxPercent());
+        holder.progressBar.setProgress(temp.getDonePercent());
+        holder.percent.setText("" + temp.getDonePercent() + "%");
+        holder.openTask.setText("unknown");
+        //todo get from server
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, SingleProjectDetails.class);
+                intent.putExtra(Constants.SINGLE_PROJECT_ID, temp.getId());
                 context.startActivity(intent);
             }
         });

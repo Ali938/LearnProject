@@ -69,16 +69,18 @@ public class Splash extends AppCompatActivity {
         Runnable runnable = new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(context,LoginActivity.class);
-                startActivity(intent);
+                String token = Constants.getToken(context);
+                if (token != null && !token.equals(Constants.NO_TOKEN)) {
+                    Intent intent = new Intent(context, MainActivity.class);
+                    startActivity(intent);
+                } else {
+                    Intent intent = new Intent(context, LoginActivity.class);
+                    startActivity(intent);
+                }
                 finish();
             }
         };
         new Handler().postDelayed(runnable, 3000);
-
-
-
-
 
     }
 

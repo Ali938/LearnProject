@@ -11,9 +11,9 @@ import android.widget.Toast;
 import com.gigamole.navigationtabstrip.NavigationTabStrip;
 
 import learn.coleo.com.learnproject.R;
-import learn.coleo.com.learnproject.activities.main_page_fragment.Tasks;
 import learn.coleo.com.learnproject.activities.main_page_fragment.Profile;
 import learn.coleo.com.learnproject.activities.main_page_fragment.Projects;
+import learn.coleo.com.learnproject.activities.main_page_fragment.Tasks;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,10 +32,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        Bundle extra = getIntent().getExtras();
-//        String username = extra.getString(USERNAME_DATA,"not found");
-//        TextView usernameText = findViewById(R.id.username_TextView_id);
-//        usernameText.setText(username);
         final NavigationTabStrip navigationTabStrip = findViewById(R.id.navigation);
         navigationTabStrip.setOnTabStripSelectedIndexListener(new NavigationTabStrip.OnTabStripSelectedIndexListener() {
             @Override
@@ -73,10 +69,16 @@ public class MainActivity extends AppCompatActivity {
         fm.beginTransaction().add(R.id.main_container, fragment2, "2").commit();
         fm.beginTransaction().add(R.id.main_container, fragment3, "3").hide(fragment3).commit();
 
+        navigationTabStrip.onPageSelected(1);
+//        navigationTabStrip.setSelected(true);
+
     }
 
     public void projectChanged(){
         ((Projects) fragment2).changed();
+    }
+    public void tasksChanged(){
+        ((Tasks) fragment3).changed();
     }
 
     @Override

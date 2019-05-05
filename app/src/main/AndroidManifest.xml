@@ -12,18 +12,11 @@
         android:roundIcon="@drawable/app_icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.ProjectTaskActivity"></activity>
-        <activity android:name=".activities.Splash"></activity>
-        <activity android:name=".activities.SingleProjectDetails">
-
-        </activity>
-        <activity
-            android:name=".activities.LoginActivity"
-            android:theme="@style/AppTheme.Login"
-            android:windowSoftInputMode="adjustResize"></activity>
-        <activity
-            android:name=".activities.MainActivity"
-            android:theme="@style/AppTheme.Main">
+        <activity android:name=".activities.AddTaskActivity"/>
+        <activity android:name=".activities.SingleTaskActivity" />
+        <activity android:name=".activities.CodeActivity" />
+        <activity android:name=".activities.ProjectTaskActivity" />
+        <activity android:name=".activities.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -31,6 +24,14 @@
             </intent-filter>
 
         </activity>
+        <activity android:name=".activities.SingleProjectDetails" />
+        <activity
+            android:name=".activities.LoginActivity"
+            android:theme="@style/AppTheme.Login"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.MainActivity"
+            android:theme="@style/AppTheme.Main" />
     </application>
 
 </manifest>
